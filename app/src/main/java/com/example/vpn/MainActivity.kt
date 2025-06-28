@@ -2,15 +2,15 @@ package com.example.vpn
 
 import android.net.VpnService
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.content.Intent
+import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.vpn.databinding.ActivityMainBinding
 import de.blinkt.openvpn.core.ProfileManager
 import de.blinkt.openvpn.core.VpnStatus        // если уже не импортирован
 import de.blinkt.openvpn.core.OpenVPNService  // понадобится в disconnect()
+import de.blinkt.openvpn.core.VpnProfile
 
 
 class MainActivity : AppCompatActivity() {
