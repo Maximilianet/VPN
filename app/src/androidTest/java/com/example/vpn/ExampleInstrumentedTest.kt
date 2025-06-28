@@ -21,4 +21,13 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.vpn", appContext.packageName)
     }
+
+    @Test
+    fun defaultProfileIsAccessible() {
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        appContext.assets.open("default.ovpn").use { stream ->
+            val text = stream.bufferedReader().readText()
+            assertTrue(text.isNotBlank())
+        }
+    }
 }
