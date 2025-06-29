@@ -1,10 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.android.library")
 }
 
 android {
     namespace = "com.example.vpn"
+
     compileSdk = 36
 
     defaultConfig {
@@ -51,7 +53,13 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.ics.openvpn)
-    implementation("com.github.schwabe:ics-openvpn:v0.6.73-production")
+    implementation(
+        name = "openvpn-v0.7.61", ext = "aar",
+        group = TODO(),
+        version = TODO(),
+        configuration = TODO(),
+        classifier = TODO(),
+        dependencyConfiguration = TODO()
+    )
 
 }
