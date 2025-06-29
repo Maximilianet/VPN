@@ -43,7 +43,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -53,5 +52,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.ics.openvpn)
-    implementation(libs.ics.openvpn.vv0761production)
+    implementation("com.github.schwabe:ics-openvpn:v0.6.73-production")
+
 }
