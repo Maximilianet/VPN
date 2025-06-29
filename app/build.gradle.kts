@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("com.android.library")
 }
 
 android {
@@ -53,13 +52,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(
-        name = "openvpn-v0.7.61", ext = "aar",
-        group = TODO(),
-        version = TODO(),
-        configuration = TODO(),
-        classifier = TODO(),
-        dependencyConfiguration = TODO()
-    )
+    implementation(files("libs/openvpn-v0.7.61.aar"))
 
 }
